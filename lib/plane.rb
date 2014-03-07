@@ -8,13 +8,12 @@ class Plane
     @flying
   end
 
-  def land(weather_conditions)
-    weather_conditions.weather == "sunny" ? @flying = false : @flying = true
+  def land
+    @flying = false
   end
 
-  def take_off(weather_conditions)
-    weather_conditions.weather == "sunny" ? @flying = true : @flying = false
+  def take_off
+    @flying = true
   end
-
 
 end
