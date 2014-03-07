@@ -8,14 +8,16 @@ let(:plane) {Plane.new}
     expect(plane.fly).to eq(true)
   end
 
-  it "should be able to land" do
-    plane.land
+  it "should be able to land in good weather" do
+    weather_conditions = double(:weather_conditions, { :weather => "sunny"})
+    plane.land(weather_conditions)
     expect(plane.fly).to eq(false)
   end
 
-  it "should be able to take off" do
-    plane.land
-    plane.take_off
+  it "should be able to take off in good weather" do
+    weather_conditions = double(:weather_conditions, { :weather => "sunny"})
+    plane.land(weather_conditions)
+    plane.take_off(weather_conditions)
     expect(plane.fly).to eq(true)
   end
 
