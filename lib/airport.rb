@@ -32,4 +32,9 @@ class Airport
     plane.take_off
   end
 
+  def weather
+    weather_conditions = ["sunny", "stormy"]
+    weather_conditions.sample
+  end
+
 end

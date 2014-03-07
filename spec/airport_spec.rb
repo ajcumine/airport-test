@@ -28,6 +28,10 @@ describe Airport do
     expect{airport.take_off_plane(plane)}.to raise_error(RuntimeError)
   end
 
+  it "should have sunny or stormy weather" do
+    expect(airport.weather).to include("sunny")
+  end
+
   context "take off and landing in sunny weather" do
 
     it "a plane can land" do
