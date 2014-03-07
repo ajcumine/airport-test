@@ -33,7 +33,7 @@ class Airport
   end
 
   def weather
-    weather_conditions = ["sunny", "stormy"]
+    weather_conditions = ["sunny", "sunny", "sunny", "sunny", "stormy"]
     weather_conditions.sample
   end
 
