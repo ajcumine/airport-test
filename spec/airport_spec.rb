@@ -29,7 +29,7 @@ describe Airport do
   end
 
   it "should have sunny or stormy weather" do
-    expect(airport.weather).to include("sunny")
+    expect(airport.weather).to match (/stormy|sunny/)
   end
 
   context "take off and landing in sunny weather" do
